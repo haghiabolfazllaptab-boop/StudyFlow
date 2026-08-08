@@ -1,0 +1,2238 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <!-- =====================================================
+         BASIC META
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
+
+    <meta
+        name="theme-color"
+        content="#6C5CE7"
+    >
+
+    <meta
+        name="description"
+        content="StudyFlow؛ دستیار حرفه‌ای مطالعه، مدیریت تکالیف، تمرکز و پیشرفت تحصیلی."
+    >
+
+    <meta
+        name="application-name"
+        content="StudyFlow"
+    >
+
+    <meta
+        name="mobile-web-app-capable"
+        content="yes"
+    >
+
+    <meta
+        name="apple-mobile-web-app-capable"
+        content="yes"
+    >
+
+    <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="default"
+    >
+
+    <meta
+        name="apple-mobile-web-app-title"
+        content="StudyFlow"
+    >
+
+
+    <!-- =====================================================
+         TITLE
+    ====================================================== -->
+
+    <title>
+        StudyFlow | دستیار هوشمند مطالعه
+    </title>
+
+
+    <!-- =====================================================
+         PWA
+    ====================================================== -->
+
+    <link
+        rel="manifest"
+        href="./manifest.json"
+    >
+
+    <link
+        rel="icon"
+        type="image/png"
+        sizes="192x192"
+        href="./icons/icon-192.png"
+    >
+
+    <link
+        rel="icon"
+        type="image/png"
+        sizes="512x512"
+        href="./icons/icon-512.png"
+    >
+
+    <link
+        rel="apple-touch-icon"
+        href="./icons/icon-192.png"
+    >
+
+
+    <!-- =====================================================
+         FONTAWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    >
+
+
+    <!-- =====================================================
+         PRECONNECT
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         STYLE
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="./style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     PAGE OVERLAY
+========================================================== -->
+
+<div
+    id="pageOverlay"
+    class="page-overlay"
+    aria-hidden="true"
+></div>
+
+
+
+<!-- =========================================================
+     MOBILE HEADER
+========================================================== -->
+
+<header class="mobile-header">
+
+    <button
+        id="mobileMenuButton"
+        class="icon-button"
+        type="button"
+        aria-label="باز کردن منو"
+    >
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+
+    <div class="mobile-brand">
+
+        <img
+            src="./icons/icon-192.png"
+            alt="StudyFlow"
+        >
+
+        <div>
+
+            <strong>
+                StudyFlow
+            </strong>
+
+            <span>
+                مطالعه هوشمند
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <button
+        id="notificationButton"
+        class="icon-button notification-button"
+        type="button"
+        aria-label="اعلان‌ها"
+    >
+
+        <i class="fa-solid fa-bell"></i>
+
+        <span class="notification-dot"></span>
+
+    </button>
+
+</header>
+
+
+
+<!-- =========================================================
+     SIDEBAR
+========================================================== -->
+
+<aside
+    class="sidebar"
+    id="sidebar"
+>
+
+
+    <!-- SIDEBAR HEADER -->
+
+    <div class="sidebar-header">
+
+        <a
+            href="#"
+            class="brand"
+            aria-label="StudyFlow"
+        >
+
+            <div class="brand-logo">
+
+                <img
+                    src="./icons/icon-192.png"
+                    alt="StudyFlow Logo"
+                >
+
+            </div>
+
+
+            <div class="brand-text">
+
+                <strong>
+                    StudyFlow
+                </strong>
+
+                <span>
+                    مسیر موفقیت تو
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <button
+            id="sidebarClose"
+            class="sidebar-close"
+            type="button"
+            aria-label="بستن منو"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+
+    <!-- USER PROFILE -->
+
+    <div class="profile-card">
+
+        <div class="profile-avatar">
+
+            <span>
+                👨‍🎓
+            </span>
+
+        </div>
+
+
+        <div class="profile-info">
+
+            <strong>
+                دانش‌آموز عزیز
+            </strong>
+
+            <span>
+                آماده‌ای بدرخشی؟ 🚀
+            </span>
+
+        </div>
+
+
+        <button
+            class="profile-more"
+            type="button"
+            aria-label="گزینه‌های پروفایل"
+        >
+
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+
+        </button>
+
+    </div>
+
+
+
+    <!-- NAVIGATION -->
+
+    <nav
+        class="main-navigation"
+        aria-label="منوی اصلی"
+    >
+
+        <div class="navigation-title">
+            منوی اصلی
+        </div>
+
+
+        <a
+            href="#"
+            class="navigation-item active"
+            data-section="dashboard"
+        >
+
+            <span class="navigation-icon">
+                <i class="fa-solid fa-house"></i>
+            </span>
+
+            <span class="navigation-label">
+                داشبورد
+            </span>
+
+        </a>
+
+
+        <a
+            href="#"
+            class="navigation-item"
+            data-section="tasks"
+        >
+
+            <span class="navigation-icon">
+                <i class="fa-solid fa-list-check"></i>
+            </span>
+
+            <span class="navigation-label">
+                تکالیف
+            </span>
+
+            <span
+                class="navigation-count"
+                id="taskCounter"
+            >
+                0
+            </span>
+
+        </a>
+
+
+        <a
+            href="#"
+            class="navigation-item"
+            data-section="schedule"
+        >
+
+            <span class="navigation-icon">
+                <i class="fa-solid fa-calendar-days"></i>
+            </span>
+
+            <span class="navigation-label">
+                برنامه مطالعه
+            </span>
+
+        </a>
+
+
+        <a
+            href="#"
+            class="navigation-item"
+            data-section="statistics"
+        >
+
+            <span class="navigation-icon">
+                <i class="fa-solid fa-chart-line"></i>
+            </span>
+
+            <span class="navigation-label">
+                آمار و پیشرفت
+            </span>
+
+        </a>
+
+
+        <div class="navigation-title navigation-title-space">
+            ابزارها
+        </div>
+
+
+        <a
+            href="#"
+            class="navigation-item"
+            data-action="focus"
+        >
+
+            <span class="navigation-icon">
+                <i class="fa-solid fa-stopwatch"></i>
+            </span>
+
+            <span class="navigation-label">
+                حالت تمرکز
+            </span>
+
+        </a>
+
+
+        <a
+            href="#"
+            class="navigation-item"
+            data-section="settings"
+        >
+
+            <span class="navigation-icon">
+                <i class="fa-solid fa-gear"></i>
+            </span>
+
+            <span class="navigation-label">
+                تنظیمات
+            </span>
+
+        </a>
+
+    </nav>
+
+
+
+    <!-- SIDEBAR BOTTOM -->
+
+    <div class="sidebar-bottom">
+
+        <div class="streak-card">
+
+            <div class="streak-icon">
+                🔥
+            </div>
+
+            <div class="streak-info">
+
+                <strong>
+                    0 روز
+                </strong>
+
+                <span>
+                    زنجیره مطالعه
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="sidebar-version">
+            StudyFlow v1.0
+        </div>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =========================================================
+     MAIN
+========================================================== -->
+
+<main class="main-content">
+
+
+    <!-- =====================================================
+         TOPBAR
+    ====================================================== -->
+
+    <header class="topbar">
+
+
+        <div class="topbar-title">
+
+            <div>
+
+                <span
+                    class="greeting"
+                    id="currentDate"
+                >
+                    امروز
+                </span>
+
+                <h1>
+                    سلام! آماده‌ای پیشرفت کنی؟ 👋
+                </h1>
+
+                <p>
+                    قدم‌به‌قدم به هدف‌هات نزدیک‌تر شو.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="topbar-actions">
+
+
+            <!-- SEARCH -->
+
+            <button
+                class="topbar-search"
+                type="button"
+                data-modal="searchModal"
+            >
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <span>
+                    جستجو...
+                </span>
+
+                <kbd>
+                    Ctrl K
+                </kbd>
+
+            </button>
+
+
+
+            <!-- THEME -->
+
+            <button
+                id="themeToggle"
+                class="topbar-icon-button"
+                type="button"
+                aria-label="تغییر حالت نمایش"
+            >
+
+                <i class="fa-solid fa-moon"></i>
+
+            </button>
+
+
+
+            <!-- NOTIFICATIONS -->
+
+            <div class="notification-wrapper">
+
+                <button
+                    id="notificationButtonDesktop"
+                    class="topbar-icon-button"
+                    type="button"
+                    aria-label="اعلان‌ها"
+                >
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <div
+                    id="notificationPanel"
+                    class="notification-panel"
+                >
+
+                    <div class="notification-header">
+
+                        <strong>
+                            اعلان‌ها
+                        </strong>
+
+                        <button
+                            id="closeNotifications"
+                            type="button"
+                            aria-label="بستن"
+                        >
+
+                            <i class="fa-solid fa-xmark"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="notification-list">
+
+                        <div class="notification-item">
+
+                            <div class="notification-item-icon purple">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    وقتشه شروع کنی!
+                                </strong>
+
+                                <span>
+                                    یک هدف کوچک برای امروز تعیین کن.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="notification-item">
+
+                            <div class="notification-item-icon blue">
+                                <i class="fa-solid fa-bullseye"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    تمرکز بیشتر، نتیجه بهتر
+                                </strong>
+
+                                <span>
+                                    از حالت تمرکز استفاده کن.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROFILE -->
+
+            <button
+                class="topbar-profile"
+                type="button"
+            >
+
+                <span>
+                    👨‍🎓
+                </span>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         DASHBOARD
+    ====================================================== -->
+
+    <section class="dashboard">
+
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <section class="hero-section">
+
+            <div class="hero-content">
+
+                <div class="hero-badge">
+
+                    <i class="fa-solid fa-sparkles"></i>
+
+                    <span>
+                        مسیر موفقیت از همین امروز شروع می‌شود
+                    </span>
+
+                </div>
+
+
+                <h2>
+                    امروز یک قدم
+                    <span>
+                        بهتر
+                    </span>
+                    باش.
+                </h2>
+
+
+                <p>
+                    برنامه‌ریزی کن، تمرکز کن،
+                    پیشرفتت را ببین و به هدف‌هایت برس.
+                </p>
+
+
+                <div class="hero-actions">
+
+                    <button
+                        class="primary-button"
+                        type="button"
+                        data-action="add-task"
+                    >
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        افزودن تکلیف
+
+                    </button>
+
+
+                    <button
+                        class="secondary-button"
+                        type="button"
+                        data-action="focus"
+                    >
+
+                        <i class="fa-solid fa-play"></i>
+
+                        شروع مطالعه
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-visual">
+
+                <div class="hero-orbit orbit-one"></div>
+
+                <div class="hero-orbit orbit-two"></div>
+
+                <div class="hero-logo-glow">
+
+                    <img
+                        src="./icons/icon-512.png"
+                        alt="StudyFlow"
+                    >
+
+                </div>
+
+                <div class="floating-card floating-card-one">
+
+                    <i class="fa-solid fa-check"></i>
+
+                    <span>
+                        هدف امروز
+                    </span>
+
+                </div>
+
+
+                <div class="floating-card floating-card-two">
+
+                    <i class="fa-solid fa-fire"></i>
+
+                    <span>
+                        شروع قدرتمند
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             QUICK STATS
+        ================================================== -->
+
+        <section class="stats-grid">
+
+
+            <article class="stat-card">
+
+                <div class="stat-icon purple">
+
+                    <i class="fa-solid fa-list-check"></i>
+
+                </div>
+
+                <div class="stat-content">
+
+                    <span>
+                        کل تکالیف
+                    </span>
+
+                    <strong id="totalTasks">
+                        0
+                    </strong>
+
+                    <small>
+                        تکلیف ثبت شده
+                    </small>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="stat-card">
+
+                <div class="stat-icon green">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+                <div class="stat-content">
+
+                    <span>
+                        انجام شده
+                    </span>
+
+                    <strong id="completedTasks">
+                        0
+                    </strong>
+
+                    <small>
+                        تکلیف تکمیل شده
+                    </small>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="stat-card">
+
+                <div class="stat-icon orange">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                </div>
+
+                <div class="stat-content">
+
+                    <span>
+                        زمان تمرکز
+                    </span>
+
+                    <strong>
+                        0
+                    </strong>
+
+                    <small>
+                        دقیقه امروز
+                    </small>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="stat-card">
+
+                <div class="stat-icon blue">
+
+                    <i class="fa-solid fa-fire"></i>
+
+                </div>
+
+                <div class="stat-content">
+
+                    <span>
+                        Streak
+                    </span>
+
+                    <strong>
+                        0
+                    </strong>
+
+                    <small>
+                        روز متوالی
+                    </small>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             MAIN GRID
+        ================================================== -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- =============================================
+                 TASKS CARD
+            ============================================== -->
+
+            <article class="dashboard-card tasks-card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span class="card-eyebrow">
+                            امروز
+                        </span>
+
+                        <h3>
+                            کارهای من
+                        </h3>
+
+                    </div>
+
+
+                    <button
+                        class="card-action"
+                        type="button"
+                        data-modal="taskModal"
+                    >
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        افزودن
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- TASK PROGRESS -->
+
+                <div class="task-progress">
+
+                    <div class="task-progress-header">
+
+                        <span>
+                            پیشرفت تکالیف
+                        </span>
+
+                        <strong>
+                            0%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress-track">
+
+                        <div
+                            class="progress-value"
+                            style="width: 0%"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TASK LIST -->
+
+                <div
+                    id="taskList"
+                    class="task-list"
+                >
+
+                    <div class="search-empty">
+
+                        <i class="fa-solid fa-clipboard-check"></i>
+
+                        <span>
+                            هنوز تکلیفی اضافه نکرده‌اید
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- =============================================
+                 FOCUS CARD
+            ============================================== -->
+
+            <article class="dashboard-card focus-card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span class="card-eyebrow">
+                            Pomodoro
+                        </span>
+
+                        <h3>
+                            زمان تمرکز
+                        </h3>
+
+                    </div>
+
+
+                    <div class="focus-status">
+                        آماده
+                    </div>
+
+                </div>
+
+
+                <div class="focus-content">
+
+
+                    <div class="focus-ring">
+
+                        <div class="focus-ring-inner">
+
+                            <span
+                                id="focusTimer"
+                                class="focus-time"
+                            >
+                                25:00
+                            </span>
+
+                            <small>
+                                تمرکز
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="focus-controls">
+
+                        <button
+                            id="startFocus"
+                            class="focus-start-button"
+                            type="button"
+                        >
+
+                            <i class="fa-solid fa-play"></i>
+
+                            شروع
+
+                        </button>
+
+
+                        <button
+                            id="resetFocus"
+                            class="focus-reset-button"
+                            type="button"
+                        >
+
+                            <i class="fa-solid fa-rotate-right"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <p class="focus-description">
+                        ۲۵ دقیقه تمرکز عمیق،
+                        سپس یک استراحت کوتاه.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =============================================
+                 PROGRESS CARD
+            ============================================== -->
+
+            <article class="dashboard-card progress-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span class="card-eyebrow">
+                            عملکرد
+                        </span>
+
+                        <h3>
+                            پیشرفت این هفته
+                        </h3>
+
+                    </div>
+
+                    <button
+                        class="more-button"
+                        type="button"
+                        aria-label="بیشتر"
+                    >
+
+                        <i class="fa-solid fa-ellipsis"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div class="chart-area">
+
+                    <div class="chart-placeholder">
+
+                        <div class="chart-grid-line"></div>
+                        <div class="chart-grid-line"></div>
+                        <div class="chart-grid-line"></div>
+                        <div class="chart-grid-line"></div>
+
+
+                        <div class="chart-bars">
+
+                            <span style="height: 35%"></span>
+                            <span style="height: 55%"></span>
+                            <span style="height: 42%"></span>
+                            <span style="height: 75%"></span>
+                            <span style="height: 62%"></span>
+                            <span style="height: 88%"></span>
+                            <span style="height: 70%"></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="chart-labels">
+
+                        <span>
+                            ش
+                        </span>
+
+                        <span>
+                            ی
+                        </span>
+
+                        <span>
+                            د
+                        </span>
+
+                        <span>
+                            س
+                        </span>
+
+                        <span>
+                            چ
+                        </span>
+
+                        <span>
+                            پ
+                        </span>
+
+                        <span>
+                            ج
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =============================================
+                 DAILY GOAL
+            ============================================== -->
+
+            <article class="dashboard-card goal-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span class="card-eyebrow">
+                            هدف روزانه
+                        </span>
+
+                        <h3>
+                            امروز چقدر پیش رفتی؟
+                        </h3>
+
+                    </div>
+
+                    <i class="fa-solid fa-bullseye goal-header-icon"></i>
+
+                </div>
+
+
+                <div class="goal-content">
+
+                    <div class="goal-circle">
+
+                        <div>
+
+                            <strong>
+                                0%
+                            </strong>
+
+                            <span>
+                                تکمیل
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="goal-details">
+
+                        <div class="goal-item">
+
+                            <span>
+                                مطالعه
+                            </span>
+
+                            <strong>
+                                0 / 120 دقیقه
+                            </strong>
+
+                        </div>
+
+
+                        <div class="goal-item">
+
+                            <span>
+                                تکالیف
+                            </span>
+
+                            <strong>
+                                0 / 0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="goal-item">
+
+                            <span>
+                                تمرکز
+                            </span>
+
+                            <strong>
+                                0 جلسه
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             SUBJECTS
+        ================================================== -->
+
+        <section class="dashboard-card subjects-card">
+
+
+            <div class="card-header">
+
+                <div>
+
+                    <span class="card-eyebrow">
+                        دروس
+                    </span>
+
+                    <h3>
+                        وضعیت درس‌ها
+                    </h3>
+
+                </div>
+
+
+                <button
+                    class="card-action"
+                    type="button"
+                >
+
+                    مشاهده همه
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                </button>
+
+            </div>
+
+
+            <div class="subjects-grid">
+
+
+                <div class="subject-card">
+
+                    <div class="subject-icon math">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+
+                    <div class="subject-info">
+
+                        <strong>
+                            ریاضی
+                        </strong>
+
+                        <span>
+                            0 تکلیف
+                        </span>
+
+                    </div>
+
+                    <div class="subject-progress">
+
+                        <div class="mini-progress">
+                            <span style="width: 0%"></span>
+                        </div>
+
+                        <small>
+                            0%
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="subject-card">
+
+                    <div class="subject-icon science">
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+
+                    <div class="subject-info">
+
+                        <strong>
+                            علوم
+                        </strong>
+
+                        <span>
+                            0 تکلیف
+                        </span>
+
+                    </div>
+
+                    <div class="subject-progress">
+
+                        <div class="mini-progress">
+                            <span style="width: 0%"></span>
+                        </div>
+
+                        <small>
+                            0%
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="subject-card">
+
+                    <div class="subject-icon programming">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+
+                    <div class="subject-info">
+
+                        <strong>
+                            کدنویسی
+                        </strong>
+
+                        <span>
+                            0 تکلیف
+                        </span>
+
+                    </div>
+
+                    <div class="subject-progress">
+
+                        <div class="mini-progress">
+                            <span style="width: 0%"></span>
+                        </div>
+
+                        <small>
+                            0%
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="subject-card">
+
+                    <div class="subject-icon english">
+                        <i class="fa-solid fa-language"></i>
+                    </div>
+
+                    <div class="subject-info">
+
+                        <strong>
+                            زبان انگلیسی
+                        </strong>
+
+                        <span>
+                            0 تکلیف
+                        </span>
+
+                    </div>
+
+                    <div class="subject-progress">
+
+                        <div class="mini-progress">
+                            <span style="width: 0%"></span>
+                        </div>
+
+                        <small>
+                            0%
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             MOTIVATION
+        ================================================== -->
+
+        <section class="motivation-card">
+
+            <div class="motivation-icon">
+                ✨
+            </div>
+
+
+            <div class="motivation-content">
+
+                <span>
+                    یادآوری امروز
+                </span>
+
+                <h3>
+                    موفقیت نتیجه‌ی کارهای کوچکی است که هر روز انجام می‌دهی.
+                </h3>
+
+                <p>
+                    حتی اگر امروز فقط یک قدم برداری،
+                    باز هم از دیروز جلوتر هستی.
+                </p>
+
+            </div>
+
+
+            <div class="motivation-decoration">
+
+                <span>✦</span>
+                <span>✧</span>
+                <span>✦</span>
+
+            </div>
+
+        </section>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     BOTTOM NAVIGATION - MOBILE
+========================================================== -->
+
+<nav class="bottom-navigation">
+
+
+    <a
+        href="#"
+        class="bottom-nav-item active"
+        data-section="dashboard"
+    >
+
+        <i class="fa-solid fa-house"></i>
+
+        <span>
+            خانه
+        </span>
+
+    </a>
+
+
+    <a
+        href="#"
+        class="bottom-nav-item"
+        data-section="tasks"
+    >
+
+        <i class="fa-solid fa-list-check"></i>
+
+        <span>
+            تکالیف
+        </span>
+
+    </a>
+
+
+    <button
+        class="bottom-add-button"
+        type="button"
+        data-action="add-task"
+        aria-label="افزودن تکلیف"
+    >
+
+        <i class="fa-solid fa-plus"></i>
+
+    </button>
+
+
+    <a
+        href="#"
+        class="bottom-nav-item"
+        data-action="focus"
+    >
+
+        <i class="fa-solid fa-stopwatch"></i>
+
+        <span>
+            تمرکز
+        </span>
+
+    </a>
+
+
+    <a
+        href="#"
+        class="bottom-nav-item"
+        data-section="statistics"
+    >
+
+        <i class="fa-solid fa-chart-simple"></i>
+
+        <span>
+            آمار
+        </span>
+
+    </a>
+
+
+</nav>
+
+
+
+<!-- =========================================================
+     ADD TASK MODAL
+========================================================== -->
+
+<div
+    id="taskModal"
+    class="modal-overlay"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="taskModalTitle"
+>
+
+    <div class="modal">
+
+
+        <div class="modal-header">
+
+            <div>
+
+                <span class="modal-eyebrow">
+                    مدیریت مطالعه
+                </span>
+
+                <h2 id="taskModalTitle">
+                    افزودن تکلیف جدید
+                </h2>
+
+            </div>
+
+
+            <button
+                class="modal-close"
+                type="button"
+                aria-label="بستن"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <form
+            id="taskForm"
+            class="modal-form"
+        >
+
+
+            <div class="form-group">
+
+                <label for="taskTitle">
+                    عنوان تکلیف
+                </label>
+
+                <div class="input-wrapper">
+
+                    <i class="fa-solid fa-pen"></i>
+
+                    <input
+                        id="taskTitle"
+                        name="taskTitle"
+                        type="text"
+                        placeholder="مثلاً حل تمرین فصل سوم"
+                        autocomplete="off"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label for="taskSubject">
+                    درس
+                </label>
+
+                <div class="input-wrapper">
+
+                    <i class="fa-solid fa-book"></i>
+
+                    <select
+                        id="taskSubject"
+                        name="taskSubject"
+                    >
+
+                        <option value="عمومی">
+                            عمومی
+                        </option>
+
+                        <option value="ریاضی">
+                            ریاضی
+                        </option>
+
+                        <option value="علوم">
+                            علوم
+                        </option>
+
+                        <option value="کدنویسی">
+                            کدنویسی
+                        </option>
+
+                        <option value="زبان انگلیسی">
+                            زبان انگلیسی
+                        </option>
+
+                        <option value="فارسی">
+                            فارسی
+                        </option>
+
+                        <option value="فیزیک">
+                            فیزیک
+                        </option>
+
+                        <option value="شیمی">
+                            شیمی
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label for="taskDate">
+                    تاریخ تحویل
+                </label>
+
+                <div class="input-wrapper">
+
+                    <i class="fa-solid fa-calendar"></i>
+
+                    <input
+                        id="taskDate"
+                        name="taskDate"
+                        type="date"
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="secondary-button"
+                    data-close-modal="taskModal"
+                >
+                    انصراف
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="primary-button"
+                >
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    افزودن تکلیف
+
+                </button>
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     FOCUS MODAL
+========================================================== -->
+
+<div
+    id="focusModal"
+    class="modal-overlay"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="focusModalTitle"
+>
+
+    <div class="modal focus-modal">
+
+
+        <div class="modal-header">
+
+            <div>
+
+                <span class="modal-eyebrow">
+                    Focus Mode
+                </span>
+
+                <h2 id="focusModalTitle">
+                    حالت تمرکز
+                </h2>
+
+            </div>
+
+
+            <button
+                class="modal-close"
+                type="button"
+                aria-label="بستن"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <div class="focus-modal-content">
+
+            <div class="large-focus-icon">
+
+                <i class="fa-solid fa-bullseye"></i>
+
+            </div>
+
+
+            <div
+                class="modal-focus-timer"
+                id="modalFocusTimer"
+            >
+                25:00
+            </div>
+
+
+            <p>
+                تمام حواس‌پرتی‌ها را کنار بگذار
+                و روی مهم‌ترین کار خود تمرکز کن.
+            </p>
+
+
+            <div class="modal-focus-actions">
+
+                <button
+                    type="button"
+                    class="primary-button"
+                    onclick="document.getElementById('startFocus')?.click()"
+                >
+
+                    <i class="fa-solid fa-play"></i>
+
+                    شروع تمرکز
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="secondary-button"
+                    onclick="document.getElementById('resetFocus')?.click()"
+                >
+
+                    <i class="fa-solid fa-rotate-right"></i>
+
+                    بازنشانی
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     SEARCH MODAL
+========================================================== -->
+
+<div
+    id="searchModal"
+    class="modal-overlay"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="searchModalTitle"
+>
+
+    <div class="modal search-modal">
+
+
+        <div class="modal-header">
+
+            <div>
+
+                <span class="modal-eyebrow">
+                    جستجو
+                </span>
+
+                <h2 id="searchModalTitle">
+                    جستجو در StudyFlow
+                </h2>
+
+            </div>
+
+
+            <button
+                class="modal-close"
+                type="button"
+                aria-label="بستن"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <div class="search-box-large">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                id="searchInput"
+                type="search"
+                placeholder="نام تکلیف یا درس را جستجو کنید..."
+                autocomplete="off"
+            >
+
+            <kbd>
+                ESC
+            </kbd>
+
+        </div>
+
+
+        <div
+            id="searchResults"
+            class="search-results"
+        >
+
+            <div class="search-empty">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <span>
+                    برای جستجو شروع به تایپ کنید
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     INSTALL BANNER
+========================================================== -->
+
+<div
+    id="installBanner"
+    class="install-banner"
+>
+
+    <div class="install-icon">
+
+        <img
+            src="./icons/icon-96.png"
+            alt="StudyFlow"
+        >
+
+    </div>
+
+
+    <div class="install-content">
+
+        <strong>
+            StudyFlow را نصب کن 🚀
+        </strong>
+
+        <span>
+            مثل یک اپلیکیشن واقعی روی دستگاهت استفاده کن.
+        </span>
+
+    </div>
+
+
+    <button
+        id="installButton"
+        class="install-button"
+        type="button"
+    >
+
+        نصب
+
+    </button>
+
+
+    <button
+        id="installClose"
+        class="install-close"
+        type="button"
+        aria-label="بستن"
+    >
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+</div>
+
+
+
+<!-- =========================================================
+     TOAST
+========================================================== -->
+
+<div
+    id="toast"
+    class="toast"
+    role="status"
+    aria-live="polite"
+>
+
+    <div class="toast-icon">
+
+        <i class="fa-solid fa-check"></i>
+
+    </div>
+
+
+    <div class="toast-content">
+
+        <strong>
+            عالی!
+        </strong>
+
+        <span>
+            عملیات با موفقیت انجام شد.
+        </span>
+
+    </div>
+
+
+    <button
+        class="toast-close"
+        type="button"
+        onclick="closeToast()"
+        aria-label="بستن"
+    >
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+</div>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================== -->
+
+<script src="./app.js"></script>
+
+
+<!-- =========================================================
+     SMALL COMPATIBILITY SCRIPT
+========================================================== -->
+
+<script>
+
+    /*
+     * بستن Modal با دکمه‌هایی که
+     * data-close-modal دارند.
+     */
+
+    document.addEventListener(
+        'click',
+        function (event) {
+
+            const button =
+                event.target.closest(
+                    '[data-close-modal]'
+                );
+
+            if (!button) {
+                return;
+            }
+
+            const modalId =
+                button.dataset.closeModal;
+
+            if (
+                typeof closeModal === 'function'
+            ) {
+
+                closeModal(modalId);
+
+            }
+
+        }
+    );
+
+
+    /*
+     * هماهنگ کردن دکمه اعلان موبایل
+     * با پنل اعلان دسکتاپ
+     */
+
+    const mobileNotification =
+        document.getElementById(
+            'notificationButton'
+        );
+
+    const desktopNotification =
+        document.getElementById(
+            'notificationButtonDesktop'
+        );
+
+    const notificationPanel =
+        document.getElementById(
+            'notificationPanel'
+        );
+
+
+    function toggleNotifications() {
+
+        if (!notificationPanel) {
+            return;
+        }
+
+        notificationPanel.classList.toggle(
+            'active'
+        );
+
+    }
+
+
+    mobileNotification?.addEventListener(
+        'click',
+        toggleNotifications
+    );
+
+
+    desktopNotification?.addEventListener(
+        'click',
+        function (event) {
+
+            event.stopPropagation();
+
+            toggleNotifications();
+
+        }
+    );
+
+
+    /*
+     * بروزرسانی تایمر داخل Modal
+     */
+
+    setInterval(
+        function () {
+
+            const mainTimer =
+                document.getElementById(
+                    'focusTimer'
+                );
+
+            const modalTimer =
+                document.getElementById(
+                    'modalFocusTimer'
+                );
+
+            if (
+                mainTimer &&
+                modalTimer
+            ) {
+
+                modalTimer.textContent =
+                    mainTimer.textContent;
+
+            }
+
+        },
+        500
+    );
+
+
+    /*
+     * درخواست Notification بعد از تعامل کاربر
+     */
+
+    document.addEventListener(
+        'click',
+        function () {
+
+            if (
+                typeof requestNotificationPermission !==
+                'function'
+            ) {
+
+                return;
+
+            }
+
+            if (
+                'Notification' in window &&
+                Notification.permission === 'default'
+            ) {
+
+                requestNotificationPermission();
+
+            }
+
+        },
+        {
+            once: true
+        }
+    );
+
+</script>
+
+
+</body>
+
+</html>
